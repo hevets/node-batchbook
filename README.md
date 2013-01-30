@@ -15,20 +15,17 @@ var client = batchbook.createClient({
 });
 ```
 
-## GET METHOD
-
+## GET
 ``` js
 /**
- * Request with `endpoint` and list of params `{ key: value}`, and optional `callback`.
+ * Request with `endpoint` with a [list of options `{ key: value}`, or a single `id`], and optional `callback`.
  *
  * @param {String} endpoint
- * @param {Object} params
+ * @param {Object} options or {Integer} id
  * @param {function} callback
  * @return {Request Object}
  * @api public
  */
-
-
 // to stream...
 client.get('people', {tags: 'awesome'}).once('data', function(res) {
   console.log(res.people);
@@ -39,4 +36,27 @@ client.get('people', {email: 'someguy@somebusiness.com'}, function(err, resp, bo
   console.log(body);
 });
 ```
+
+``` js
+// getting back a single person
+client.get('people', 19).once('data', function(res) {
+  console.log(res.people);
+});
+```
+
+## POST
+``` js
+```
+
+## PUT
+``` js
+```
+
+## DELETE
+``` js
+```
+
+
+
+## TODO's
 
