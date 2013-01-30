@@ -9,17 +9,32 @@ Using batchbook is easy, create a client, start doing things.
 ``` js
 var batchbook = require('batchbook');
 
-var client = batchbook.createClient({key: api_key, account: account_name});
+var client = batchbook.createClient({
+  key: 'api_key',
+  account: 'account_name'
+});
 ```
 
-## node-batchbook uses request to call the api
+## GET METHOD
+
 ``` js
-// The Stream way...returns a request object
+/**
+ * Request with `endpoint` and list of params `{ key: value}`, and optional `callback`.
+ *
+ * @param {String} endpoint
+ * @param {Object} params
+ * @param {function} callback
+ * @return {Request Object}
+ * @api public
+ */
+
+
+// to stream...
 client.get('people', {tags: 'awesome'}).once('data', function(res) {
   console.log(res.people);
 });
 
-// The callback way
+// ...or not to stream
 client.get('people', {email: 'someguy@somebusiness.com'}, function(err, resp, body) {
   console.log(body);
 });
