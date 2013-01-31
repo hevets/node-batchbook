@@ -46,17 +46,21 @@ client.get('people', 19).once('data', function(res) {
 
 ## POST
 ``` js
+
 ```
 
 ## PUT
 ``` js
+
 ```
 
 ## DELETE
 ``` js
+
 ```
 
 
 
 ## TODO's
+- XML style post, put, deletes (don't know if this)
 
