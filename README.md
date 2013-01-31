@@ -2,6 +2,7 @@ node-batchbook
 ==============
 
 # BatchBook CRM API Wrapper
+read more about the [batchbook-api](https://github.com/batchblue/batchbook-api)
 
 ## Usage
 Using batchbook is easy, create a client, start doing things.
@@ -16,16 +17,8 @@ var client = batchbook.createClient({
 ```
 
 ## GET
+Get a list of documents, batchbook has a 25 document maximum [github/batchbook](https://github.com/batchblue/batchbook-api)
 ``` js
-/**
- * Request with `endpoint` with a [list of options `{ key: value}`, or a single `id`], and optional `callback`.
- *
- * @param {String} endpoint
- * @param {Object} options or {Integer} id
- * @param {function} callback
- * @return {Request Object}
- * @api public
- */
 // to stream...
 client.get('people', {tags: 'awesome'}).once('data', function(res) {
   console.log(res.people);
@@ -37,8 +30,8 @@ client.get('people', {email: 'someguy@somebusiness.com'}, function(err, resp, bo
 });
 ```
 
+Getting a single document
 ``` js
-// getting back a single person
 client.get('people', 19).once('data', function(res) {
   console.log(res.people);
 });
