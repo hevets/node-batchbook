@@ -17,3 +17,8 @@ client.get('companies').once('data', function(res) {
   console.log('2nd request', res);
 });
 
+var person = { "person" : { id: 500, first_name: "steve" }};
+
+client.post('person', person).on('data', function(err, resp, body) {
+  console.log(body);
+});
