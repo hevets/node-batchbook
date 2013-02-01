@@ -1,8 +1,10 @@
 {
   "name" : "node-batchbook",
+  "author": "hevets",
   "description" : "BatchBook CRM API Wrapper",
   "directories": {
-    "test": "test"
+    "test": "test",
+    "lib": "lib"
   },
   "version" : "0.0.1",
   "repository" : {
