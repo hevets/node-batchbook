@@ -1,5 +1,4 @@
 var batchbook = require('../index.js');
-var request = require('request');
 
 var client = batchbook.createClient({
   account: 'apitest',

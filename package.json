@@ -1,6 +1,9 @@
 {
   "name" : "node-batchbook",
   "description" : "BatchBook CRM API Wrapper",
+  "directories": {
+    "test": "test"
+  },
   "version" : "0.0.1",
   "repository" : {
     "type" : "git",
@@ -22,6 +25,6 @@
     "node" : ">=0.8"
   },
   "scripts": {
-    "test": "tap ./test"
+    "test": "tap test/*.js"
   }
 }
