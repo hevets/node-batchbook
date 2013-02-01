@@ -10,7 +10,7 @@ test("test getUrl", function(t) {
   t.test('\ninvalid method calls\n', function(t) {
     t.plan(2);
     t.throws(function() { client.getUrl()}, 'no endpoint supplied');
-    t.throws(client.getUrl('peeple'), 'invalid endpoint');
+    t.throws(function() {client.getUrl('peeple')}, 'invalid endpoint');
   });
 
   t.test('\nendpoint with no parameters', function(t) {
