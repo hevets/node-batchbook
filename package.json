@@ -20,9 +20,9 @@
   ],
   "dependencies" : {
     "request" : ">=2.0.0",
-    "inherits": ">=1.0.0",
+    "inherits": ">=1.0.0"
   },
-  "devDependencies": {
+  "devDependencies" : {
     "tap" : ">=0.3.3"
   },
   "engine" : {
