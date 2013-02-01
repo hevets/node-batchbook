@@ -15,9 +15,13 @@
   ],
   "dependencies" : {
     "request" : ">=2.0.0",
-    "inherits": ">=1.0.0"
+    "inherits": ">=1.0.0",
+    "tap" : ">=0.3.3"
   },
   "engine" : {
     "node" : ">=0.8"
+  },
+  "scripts": {
+    "test": "tap ./test"
   }
 }
