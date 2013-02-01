@@ -77,7 +77,7 @@ client.deleteSync('people', 39, function(err, res, body) {
 ```
 
 ## TODO's
-- Writing some tests
+- Finish writing tests for requests
 - XML style post, put, deletes (don't know if this will ever get done)
 
 
