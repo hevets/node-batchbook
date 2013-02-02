@@ -16,7 +16,7 @@ test("test formatData", function(t) {
     t.throws(function() {batchbook.createClient({key: 'GR5doLv88FrnLyLGIwok'})}, 'account is required');
   });
 
-  t.test('\ndefault properties', function(t) {
+  t.test('\nrequired properties', function(t) {
     t.plan(2);
 
     var client = batchbook.createClient({

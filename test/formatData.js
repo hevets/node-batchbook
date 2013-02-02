@@ -11,7 +11,7 @@ test("test formatData", function(t) {
     t.throws(function() { client.formatData(invalidData)});
   });
 
-  t.test('\nproper data', function(t) {
+  t.test('\nvalid data', function(t) {
     t.plan(1);
     t.similar(client.formatData(proper), proper, 'should be correct data unchanged');
   });
