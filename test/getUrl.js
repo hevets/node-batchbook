@@ -23,12 +23,6 @@ test("test getUrl", function(t) {
     t.equals(client.getUrl('people'), peopleResult.split('&')[0], 'get all people');
   });
 
-  t.test('\nendpoint parameter with multiple tags', function(t) {
-    t.plan(2);
-    t.equals(client.getUrl('people', {tags: ['awesome', 'super-awesome']}), multiTagResult, 'multiple tags');
-    t.equals(client.getUrl('people', {tags: ['awesome', 'super-awesome'], first_name: 'steve'}), multiTagResult + '&first_name=steve', 'multiple tags');
-  });
-
   t.test('\nendpoint with multiple parameters', function(t) {
     t.plan(1);
     t.equals(client.getUrl('people', {first_name: 'steve', last_name: 'henderson'}), peopleResult, 'get all people with multiple params');
