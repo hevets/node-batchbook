@@ -7,7 +7,12 @@ test("test getUrl", function(t) {
     '&first_name=steve' +
     '&last_name=henderson';
 
-  t.test('\ninvalid method calls\n', function(t) {
+  var multiTagResult = 'https://apitest.localhost:1337/people.json' +
+    '?auth_token=GR5doLv88FrnLyLGIwok' +
+    '&tags=awesome' +
+    '&tags=super-awesome';
+
+  t.test('\ninvalid method calls', function(t) {
     t.plan(2);
     t.throws(function() { client.getUrl()}, 'no endpoint supplied');
     t.throws(function() {client.getUrl('peeple')}, 'invalid endpoint');
@@ -16,6 +21,12 @@ test("test getUrl", function(t) {
   t.test('\nendpoint with no parameters', function(t) {
     t.plan(1);
     t.equals(client.getUrl('people'), peopleResult.split('&')[0], 'get all people');
+  });
+
+  t.test('\nendpoint parameter with multiple tags', function(t) {
+    t.plan(2);
+    t.equals(client.getUrl('people', {tags: ['awesome', 'super-awesome']}), multiTagResult, 'multiple tags');
+    t.equals(client.getUrl('people', {tags: ['awesome', 'super-awesome'], first_name: 'steve'}), multiTagResult + '&first_name=steve', 'multiple tags');
   });
 
   t.test('\nendpoint with multiple parameters', function(t) {
