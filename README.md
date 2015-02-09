@@ -1,3 +1,5 @@
+# NOT MAINTAINED
+
 # BatchBook CRM API Wrapper (for node)
 read more about the [batchbook-api](https://github.com/batchblue/batchbook-api)
 
